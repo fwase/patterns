@@ -16,8 +16,8 @@ autoflake:
 lint: ISORT_OPTIONS := --check-only
 lint: BLACK_OPTIONS := --check
 lint: autoflake isort black
-	pipenv run mypy **/*.py --ignore-missing-imports
-	pipenv run flake8 **/*.py --exclude snapshots
+	pipenv run mypy **/ --ignore-missing-imports
+	pipenv run flake8 **/ --exclude snapshots
 
 .PHONY: format
 format: AUTOFLAKE_OPTIONS := --in-place
